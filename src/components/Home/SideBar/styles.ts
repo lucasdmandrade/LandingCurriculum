@@ -16,7 +16,8 @@ export const Container = styled.div`
 `;
 
 export const ContainerTitle = styled.h1`
-  font-size: 28px;
+  font-size: 20px;
+  font-weight: 400;
 `;
 
 export const ContactsContainer = styled.div`
@@ -31,12 +32,36 @@ export const ContactsContent = styled.div`
 `;
 
 export const ContentTitle = styled.h2`
-  font-size: 20px;
+  font-size: 17px;
+  font-weight: lighter;
   margin: 0;
 `;
 
 export const Content = styled.h3`
-  font-size: 16px;
+  font-size: 15px;
+  font-weight: 300;
   margin: 0;
   margin-left: 5px;
+`;
+
+export const SocialIconsContent = styled.div`
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  width: 80%;
+`;
+
+export const SocialIconsButton = styled.button`
+  background-color: transparent;
+  width: 30px;
+  height: 30px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+  }
 `;
