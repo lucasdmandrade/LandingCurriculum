@@ -39,7 +39,30 @@ export const ContentTitle = styled.h2`
   font-size: 20px;
 `;
 
-export const ExperienceContainer = styled.div`
+export const ExperienceContainer = styled.button`
+  display: flex;
+  margin: 20px 0 0 0;
+  padding: 10px;
+  border-style: none;
+  background-color: transparent;
+  text-align: left;
+
+  &:hover {
+    cursor: pointer;
+    background-color: rgba(0, 0, 0, 0.1);
+    border-radius: 25px;
+  }
+`;
+
+export const ExperienceContainerDescritiveText = styled.div`
+  display: flex;
+  flex-direction: column;
+  margin: 20px 0 0 40px;
+`;
+
+export const ExperienceContainerResumeText = styled.div`
+  display: flex;
+  flex-direction: column;
   margin: 20px 0 0 0;
 `;
 

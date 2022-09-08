@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const Container = styled.div`
   display: flex;
   flex-direction: column;
-  width: 30%;
+  width: 350px;
   background-color: #2c3050;
   margin: 0;
   padding: 15px;
@@ -13,6 +13,11 @@ export const Container = styled.div`
     color: #ffffff;
     text-decoration: none;
   }
+`;
+
+export const PeronalPhoto = styled.img`
+  width: 250px;
+  border-radius: 50%;
 `;
 
 export const ContainerTitle = styled.h1`

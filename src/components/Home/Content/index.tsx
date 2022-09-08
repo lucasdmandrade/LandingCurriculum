@@ -9,6 +9,8 @@ import {
   Divisor,
   ExperienceComplement,
   ExperienceContainer,
+  ExperienceContainerDescritiveText,
+  ExperienceContainerResumeText,
   ExperienceDescription,
   ExperienceTitle,
 } from "./styles";
@@ -37,26 +39,46 @@ const HomeContent = () => {
 
       <ContentTitle>Experiência</ContentTitle>
 
-      <ExperienceContainer>
-        <ExperienceTitle>Quero2 Bank</ExperienceTitle>
-        <ExperienceDescription>Mobile developer</ExperienceDescription>
-        <ExperienceComplement>
-          Abril de 2022 - Present (5 meses)
-        </ExperienceComplement>
-        <ExperienceComplement isSmokly>
-          Franca, São Paulo, Brazil
-        </ExperienceComplement>
+      <ExperienceContainer
+        onClick={() => {
+          window.location.href =
+            "https://play.google.com/store/apps/details?id=br.com.quero2pay.q2bank";
+        }}
+      >
+        <ExperienceContainerResumeText>
+          <ExperienceTitle>Quero2 Bank</ExperienceTitle>
+          <ExperienceDescription>Mobile developer</ExperienceDescription>
+          <ExperienceComplement>
+            Abril de 2022 - Present (5 meses)
+          </ExperienceComplement>
+          <ExperienceComplement isSmokly>
+            Franca, São Paulo, Brazil
+          </ExperienceComplement>
+        </ExperienceContainerResumeText>
       </ExperienceContainer>
 
-      <ExperienceContainer>
-        <ExperienceTitle>CloudMed Tecnologia</ExperienceTitle>
-        <ExperienceDescription>Full Stack Engineer</ExperienceDescription>
-        <ExperienceComplement>
-          Outubro de 2021 - maio de 2022 (8 meses)
-        </ExperienceComplement>
-        <ExperienceComplement isSmokly>
-          Franca, São Paulo, Brasil
-        </ExperienceComplement>
+      <ExperienceContainer
+        onClick={() => {
+          window.location.href = "https://biodoc.com.br/";
+        }}
+      >
+        <ExperienceContainerResumeText>
+          <ExperienceTitle>CloudMed Tecnologia</ExperienceTitle>
+          <ExperienceDescription>Full Stack Engineer</ExperienceDescription>
+          <ExperienceComplement>
+            Outubro de 2021 - maio de 2022 (8 meses)
+          </ExperienceComplement>
+          <ExperienceComplement isSmokly>
+            Franca, São Paulo, Brasil
+          </ExperienceComplement>
+        </ExperienceContainerResumeText>
+        <ExperienceContainerDescritiveText>
+          <ExperienceComplement>
+            {" "}
+            Meus trabalhos consistiam...
+          </ExperienceComplement>
+        </ExperienceContainerDescritiveText>
+        <ExperienceContainerDescritiveText></ExperienceContainerDescritiveText>
       </ExperienceContainer>
 
       <Divisor />

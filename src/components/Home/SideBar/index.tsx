@@ -1,4 +1,5 @@
 import React from "react";
+import PersonalPhoto from "../../../assets/personalPhoto.jpg";
 import InstagramIcon from "../../../assets/instagramIcon.svg";
 import whatsappIcon from "../../../assets/whatsappIcon.svg";
 import linkedinIcon from "../../../assets/linkedinIcon.svg";
@@ -13,11 +14,14 @@ import {
   Content,
   SocialIconsButton,
   SocialIconsContent,
+  PeronalPhoto,
 } from "./styles";
 
 const SideBar = () => {
   return (
     <Container>
+      <PeronalPhoto src={PersonalPhoto} alt="Instagram Logo" />
+
       <ContainerTitle>Contatos</ContainerTitle>
 
       <ContactsContent>
@@ -44,6 +48,7 @@ const SideBar = () => {
       <ContentTitle>React.js</ContentTitle>
       <ContentTitle>React Native</ContentTitle>
       <ContentTitle>JavaScript</ContentTitle>
+      <ContentTitle>Complience</ContentTitle>
 
       <ContainerTitle>Certificações</ContainerTitle>
       <ContentTitle>React.js</ContentTitle>
