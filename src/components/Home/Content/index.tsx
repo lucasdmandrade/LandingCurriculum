@@ -28,6 +28,19 @@ const HomeContent = () => {
       </ContainerTitleDescription>
 
       <ContentTitle>Resumo</ContentTitle>
+      <ContainerTitleDescription>
+        Atualmente, inserido na área da programação, sou movido pelos estímulos
+        dos projetos diários e pela busca de soluções únicas e inusitadas. Isso
+        se deve, pois, na área de desenvolvimento de softwares não existe uma
+        única resposta para as situações ou uma única forma de atingir seus
+        objetivos. Logo, as várias possibilidades me motivam à dedicação às
+        minhas metas, sendo que o desafio renova minhas forças para o
+        conhecimento constante. Dessa forma, busco confeccionar meus projetos de
+        maneira eficiente, por meio de métodos pensados estrategicamente.
+        Alinhado a isso, minhas competências incluem: React.js, React Native e
+        JavaScript. Além disso, possuo experiência com Mobile Developer (5 meses
+        - presente) e Full Stack Engineer (8 meses).
+      </ContainerTitleDescription>
       <ContainerTitleDescription haveMarginTop>
         “There is no single development, in either technology or management
         technique, which by itself promises even one order-of magnitude

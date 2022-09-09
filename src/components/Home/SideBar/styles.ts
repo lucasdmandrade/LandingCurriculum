@@ -1,4 +1,9 @@
 import styled from "styled-components";
+import {
+  fontDefaultBold,
+  fontDefaultligther,
+  fontDefaultLigth,
+} from "../../../theme/text";
 
 export const Container = styled.div`
   display: flex;
@@ -23,7 +28,7 @@ export const PeronalPhoto = styled.img`
 
 export const ContainerTitle = styled.h1`
   font-size: 20px;
-  font-weight: 400;
+  font: ${fontDefaultBold};
 `;
 
 export const ContactsContainer = styled.div`
@@ -46,13 +51,12 @@ export const ContentContainer = styled.div`
 
 export const ContentTitle = styled.h2`
   font-size: 17px;
-  font-weight: lighter;
   margin: 0;
+  font: ${fontDefaultLigth};
 `;
 
 export const Content = styled.h3`
   font-size: 15px;
-  font-weight: 300;
   margin: 0;
   margin-left: 5px;
 `;

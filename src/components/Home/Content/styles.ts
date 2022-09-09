@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { fontDefaultBold, fontDefaultBolder } from "../../../theme/text";
 
 export const Container = styled.div`
   display: flex;
@@ -21,6 +22,7 @@ export const ContainerTitle = styled.h1`
   margin-top: 20px;
   margin-bottom: 5px;
   font-size: 25px;
+  font: ${fontDefaultBold};
 `;
 
 export const ContainerTitleDescription = styled.h3<{
@@ -37,6 +39,7 @@ export const ContentTitle = styled.h2`
   margin: 0;
   margin-top: 15px;
   font-size: 20px;
+  font: ${fontDefaultBolder};
 `;
 
 export const ExperienceContainer = styled.button`
