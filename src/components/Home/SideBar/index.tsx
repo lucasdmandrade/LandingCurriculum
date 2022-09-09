@@ -15,6 +15,7 @@ import {
   SocialIconsButton,
   SocialIconsContent,
   PeronalPhoto,
+  ContentContainer,
 } from "./styles";
 
 const SideBar = () => {
@@ -50,8 +51,15 @@ const SideBar = () => {
       <ContentTitle>JavaScript</ContentTitle>
       <ContentTitle>Complience</ContentTitle>
 
-      <ContainerTitle>Certificações</ContainerTitle>
-      <ContentTitle>React.js</ContentTitle>
+      <ContentContainer
+        onClick={() => {
+          window.location.href =
+            "https://github.com/lucasdmandrade/Certificados";
+        }}
+      >
+        <ContainerTitle>Certificações</ContainerTitle>
+        <ContentTitle>React.js</ContentTitle>
+      </ContentContainer>
 
       <ContainerTitle>Redes sociais</ContainerTitle>
       <SocialIconsContent>

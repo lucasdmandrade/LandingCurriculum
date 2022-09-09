@@ -4,6 +4,7 @@ export const Container = styled.div`
   display: flex;
   flex-direction: column;
   width: 350px;
+  min-height: 100vh;
   background-color: #2c3050;
   margin: 0;
   padding: 15px;
@@ -34,6 +35,13 @@ export const ContactsContent = styled.div`
   flex-direction: row;
   align-items: flex-end;
   margin: 3px 0;
+`;
+
+export const ContentContainer = styled.div`
+  &:hover {
+    opacity: 0.5;
+    cursor: pointer;
+  }
 `;
 
 export const ContentTitle = styled.h2`
