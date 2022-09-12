@@ -27,12 +27,13 @@ export const PeronalPhoto = styled.img`
 `;
 
 export const ContainerTitle = styled.h1`
-  font-size: 20px;
   font: ${fontDefaultBold};
+  font-size: 20px;
 `;
 
 export const ContactsContainer = styled.div`
-  display: flex;
+  padding: 5px;
+  border-radius: 15px;
 `;
 
 export const ContactsContent = styled.div`
@@ -42,30 +43,37 @@ export const ContactsContent = styled.div`
   margin: 3px 0;
 `;
 
-export const ContentContainer = styled.div`
+export const ContentContainer = styled.div<{ hasAnimation?: boolean }>`
+  padding: 5px;
+  border-radius: 15px;
+  transition: color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+
   &:hover {
-    opacity: 0.5;
-    cursor: pointer;
+    box-shadow: ${({ hasAnimation }) =>
+      hasAnimation ? "inset 260px 0 0 0 #fff" : " "};
+    color: ${({ hasAnimation }) => (hasAnimation ? "#2c3050" : " ")};
+    cursor: ${({ hasAnimation }) => (hasAnimation ? "pointer" : " ")};
   }
 `;
 
 export const ContentTitle = styled.h2`
-  font-size: 17px;
-  margin: 0;
   font: ${fontDefaultLigth};
+  font-size: 17px;
 `;
 
 export const Content = styled.h3`
+  font: ${fontDefaultligther};
   font-size: 15px;
   margin: 0;
   margin-left: 5px;
 `;
 
 export const SocialIconsContent = styled.div`
+  width: 80%;
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
-  width: 80%;
+  margin-top: 10px;
 `;
 
 export const SocialIconsButton = styled.button`

@@ -1,4 +1,5 @@
 import React from "react";
+import DivisorComponent from "../../../components/DivisorComponent";
 import {
   AcademyComplement,
   AcademyDescription,
@@ -6,7 +7,6 @@ import {
   ContainerTitle,
   ContainerTitleDescription,
   ContentTitle,
-  Divisor,
   ExperienceComplement,
   ExperienceContainer,
   ExperienceContainerDescritiveText,
@@ -48,7 +48,7 @@ const HomeContent = () => {
         simplicity” — Frederick P. Brooks, Jr.
       </ContainerTitleDescription>
 
-      <Divisor />
+      <DivisorComponent width="100px" />
 
       <ContentTitle>Experiência</ContentTitle>
 
@@ -94,7 +94,7 @@ const HomeContent = () => {
         <ExperienceContainerDescritiveText></ExperienceContainerDescritiveText>
       </ExperienceContainer>
 
-      <Divisor />
+      <DivisorComponent width="100px" />
 
       <ContentTitle>Formação acadêmica</ContentTitle>
       <AcademyDescription>

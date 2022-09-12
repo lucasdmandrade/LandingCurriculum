@@ -9,14 +9,6 @@ export const Container = styled.div`
   text-align: justify;
 `;
 
-export const Divisor = styled.hr`
-  display: flex;
-  width: 100px;
-  height: 1px;
-  background-color: black;
-  margin: 30px 0 0 0;
-`;
-
 export const ContainerTitle = styled.h1`
   margin: 0;
   margin-top: 20px;

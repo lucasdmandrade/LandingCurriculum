@@ -1,6 +1,6 @@
 import React from "react";
-import HomeContent from "../../components/Home/Content";
-import SideBar from "../../components/Home/SideBar";
+import HomeContent from "./Content";
+import SideBar from "./SideBar";
 import { Container } from "./styles";
 
 const Home = () => {
