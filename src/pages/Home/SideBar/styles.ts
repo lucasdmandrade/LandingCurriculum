@@ -45,14 +45,15 @@ export const ContactsContent = styled.div`
 
 export const ContentContainer = styled.div<{ hasAnimation?: boolean }>`
   padding: 5px;
+  margin-top: 10px;
   border-radius: 15px;
   transition: color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 
   &:hover {
     box-shadow: ${({ hasAnimation }) =>
-      hasAnimation ? "inset 260px 0 0 0 #fff" : " "};
-    color: ${({ hasAnimation }) => (hasAnimation ? "#2c3050" : " ")};
-    cursor: ${({ hasAnimation }) => (hasAnimation ? "pointer" : " ")};
+      hasAnimation ? "inset 260px 0 #fff" : "none"};
+    color: ${({ hasAnimation }) => (hasAnimation ? "#2c3050" : "none")};
+    cursor: ${({ hasAnimation }) => (hasAnimation ? "pointer" : "")};
   }
 `;
 

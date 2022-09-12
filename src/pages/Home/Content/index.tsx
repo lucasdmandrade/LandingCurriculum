@@ -48,7 +48,7 @@ const HomeContent = () => {
         simplicity” — Frederick P. Brooks, Jr.
       </ContainerTitleDescription>
 
-      <DivisorComponent width="100px" />
+      <DivisorComponent width="100px" color="#eeeeee8d" />
 
       <ContentTitle>Experiência</ContentTitle>
 
@@ -94,7 +94,7 @@ const HomeContent = () => {
         <ExperienceContainerDescritiveText></ExperienceContainerDescritiveText>
       </ExperienceContainer>
 
-      <DivisorComponent width="100px" />
+      <DivisorComponent width="100px" color="#eeeeee8d" />
 
       <ContentTitle>Formação acadêmica</ContentTitle>
       <AcademyDescription>

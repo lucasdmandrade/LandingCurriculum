@@ -58,7 +58,6 @@ export const ExperienceContainerDescritiveText = styled.div`
 export const ExperienceContainerResumeText = styled.div`
   display: flex;
   flex-direction: column;
-  margin: 20px 0 0 0;
 `;
 
 export const ExperienceTitle = styled.h2`
