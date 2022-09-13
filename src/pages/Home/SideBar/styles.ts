@@ -39,7 +39,7 @@ export const ContactsContainer = styled.div`
 export const ContactsContent = styled.div`
   display: flex;
   flex-direction: row;
-  align-items: flex-end;
+  align-items: center;
   margin: 3px 0;
 `;
 
@@ -60,6 +60,7 @@ export const ContentContainer = styled.div<{ hasAnimation?: boolean }>`
 export const ContentTitle = styled.h2`
   font: ${fontDefaultLigth};
   font-size: 17px;
+  margin-left: 5px;
 `;
 
 export const Content = styled.h3`

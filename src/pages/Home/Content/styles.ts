@@ -6,6 +6,7 @@ export const Container = styled.div`
   flex-direction: column;
   width: 100%;
   padding: 15px;
+  margin-right: 25px;
   text-align: justify;
 `;
 
@@ -34,15 +35,35 @@ export const ContentTitle = styled.h2`
   font: ${fontDefaultBolder};
 `;
 
-export const ExperienceContainer = styled.button`
+export const Scroller = styled.div`
   display: flex;
-  margin: 20px 0 0 0;
-  padding: 10px;
+  flex-direction: row;
+  overflow: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  :target {
+    scroll-margin-inline: initial;
+  }
+  ::-webkit-scrollbar {
+    display: none;
+  }
+`;
+
+export const ExperienceContainer = styled.button`
+  min-width: 100%;
+  scroll-snap-align: start;
+  display: flex;
+  align-items: center;
+  margin: 10px 0 0 0;
+  padding: 5px;
   border-style: none;
   background-color: transparent;
   text-align: left;
+  border: 1px solid transparent;
+  animation: scrollingSlider 20s linear infinite;
 
   &:hover {
+    border: 1px solid black;
     cursor: pointer;
     background-color: rgba(0, 0, 0, 0.1);
     border-radius: 25px;
@@ -50,12 +71,14 @@ export const ExperienceContainer = styled.button`
 `;
 
 export const ExperienceContainerDescritiveText = styled.div`
+  width: 60%;
   display: flex;
   flex-direction: column;
   margin: 20px 0 0 40px;
 `;
 
 export const ExperienceContainerResumeText = styled.div`
+  width: 30%;
   display: flex;
   flex-direction: column;
 `;

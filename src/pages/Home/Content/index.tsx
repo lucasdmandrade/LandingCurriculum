@@ -13,6 +13,7 @@ import {
   ExperienceContainerResumeText,
   ExperienceDescription,
   ExperienceTitle,
+  Scroller,
 } from "./styles";
 
 const HomeContent = () => {
@@ -37,9 +38,9 @@ const HomeContent = () => {
         minhas metas, sendo que o desafio renova minhas forças para o
         conhecimento constante. Dessa forma, busco confeccionar meus projetos de
         maneira eficiente, por meio de métodos pensados estrategicamente.
-        Alinhado a isso, minhas competências incluem: React.js, React Native e
-        JavaScript. Além disso, possuo experiência com Mobile Developer (5 meses
-        - presente) e Full Stack Engineer (8 meses).
+        Alinhado a isso, minhas competências incluem: Desenvolvimento front-end,
+        back-end e mobile. Usando as stacks: React.js, React Native e
+        JavaScript.
       </ContainerTitleDescription>
       <ContainerTitleDescription haveMarginTop>
         “There is no single development, in either technology or management
@@ -52,47 +53,63 @@ const HomeContent = () => {
 
       <ContentTitle>Experiência</ContentTitle>
 
-      <ExperienceContainer
-        onClick={() => {
-          window.location.href =
-            "https://play.google.com/store/apps/details?id=br.com.quero2pay.q2bank";
-        }}
-      >
-        <ExperienceContainerResumeText>
-          <ExperienceTitle>Quero2 Bank</ExperienceTitle>
-          <ExperienceDescription>Mobile developer</ExperienceDescription>
-          <ExperienceComplement>
-            Abril de 2022 - Present (5 meses)
-          </ExperienceComplement>
-          <ExperienceComplement isSmokly>
-            Franca, São Paulo, Brazil
-          </ExperienceComplement>
-        </ExperienceContainerResumeText>
-      </ExperienceContainer>
+      <Scroller>
+        <ExperienceContainer
+          onClick={() => {
+            window.location.href =
+              "https://play.google.com/store/apps/details?id=br.com.quero2pay.q2bank";
+          }}
+        >
+          <ExperienceContainerResumeText>
+            <ExperienceTitle>Quero2 Bank</ExperienceTitle>
+            <ExperienceDescription>Mobile developer</ExperienceDescription>
+            <ExperienceComplement>
+              Abril de 2022 - Present (5 meses)
+            </ExperienceComplement>
+            <ExperienceComplement isSmokly>
+              Franca, São Paulo, Brazil
+            </ExperienceComplement>
+          </ExperienceContainerResumeText>
+          <ExperienceContainerDescritiveText>
+            <ExperienceComplement>
+              {" "}
+              Trabalhei no desenvolvimento do aplicativo Q2 Bank, um banco
+              digital voltado para os credenciados da Q2 terem maior controle de
+              suas POS. Exercendo as funções: Desenvolvimento do front end,
+              deploy, criação de testes automatizados, criação de testes end to
+              end.
+            </ExperienceComplement>
+          </ExperienceContainerDescritiveText>
+        </ExperienceContainer>
 
-      <ExperienceContainer
-        onClick={() => {
-          window.location.href = "https://biodoc.com.br/";
-        }}
-      >
-        <ExperienceContainerResumeText>
-          <ExperienceTitle>CloudMed Tecnologia</ExperienceTitle>
-          <ExperienceDescription>Full Stack Engineer</ExperienceDescription>
-          <ExperienceComplement>
-            Outubro de 2021 - maio de 2022 (8 meses)
-          </ExperienceComplement>
-          <ExperienceComplement isSmokly>
-            Franca, São Paulo, Brasil
-          </ExperienceComplement>
-        </ExperienceContainerResumeText>
-        <ExperienceContainerDescritiveText>
-          <ExperienceComplement>
-            {" "}
-            Meus trabalhos consistiam...
-          </ExperienceComplement>
-        </ExperienceContainerDescritiveText>
-        <ExperienceContainerDescritiveText></ExperienceContainerDescritiveText>
-      </ExperienceContainer>
+        <ExperienceContainer
+          onClick={() => {
+            window.location.href = "https://biodoc.com.br/";
+          }}
+        >
+          <ExperienceContainerResumeText>
+            <ExperienceTitle>CloudMed Tecnologia</ExperienceTitle>
+            <ExperienceDescription>Full Stack Engineer</ExperienceDescription>
+            <ExperienceComplement>
+              Outubro de 2021 - maio de 2022 (8 meses)
+            </ExperienceComplement>
+            <ExperienceComplement isSmokly>
+              Franca, São Paulo, Brasil
+            </ExperienceComplement>
+          </ExperienceContainerResumeText>
+          <ExperienceContainerDescritiveText>
+            <ExperienceComplement>
+              {" "}
+              Trabalhei no desenvolvimento da plataforma de compras da Unimed
+              realizando as funções: Desenvolvimento do front end, criação de
+              testes automatizados, correção de bugs no back end, deploy e
+              manutenção do projeto legado. Finalizada a plataforma atuei no
+              desenvolvimento de um sistema antifraude com reconhecimento facial
+              realizando as funções: Desenvolvimento do front end e deploy.
+            </ExperienceComplement>
+          </ExperienceContainerDescritiveText>
+        </ExperienceContainer>
+      </Scroller>
 
       <DivisorComponent width="100px" color="#eeeeee8d" />
 

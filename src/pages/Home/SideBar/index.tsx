@@ -71,6 +71,9 @@ const SideBar = () => {
       >
         <ContainerTitle>Certificações</ContainerTitle>
         <ContentTitle>React.js</ContentTitle>
+        <ContentTitle>Complience</ContentTitle>
+        <ContentTitle>Power Bi</ContentTitle>
+        <ContentTitle>Industria de games</ContentTitle>
       </ContentContainer>
 
       <ContentContainer>
