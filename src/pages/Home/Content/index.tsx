@@ -1,4 +1,4 @@
-import React from "react";
+import React, { createRef, useEffect, useRef, useState } from "react";
 import DivisorComponent from "../../../components/DivisorComponent";
 import {
   AcademyComplement,
@@ -17,6 +17,23 @@ import {
 } from "./styles";
 
 const HomeContent = () => {
+  const [loop, setLoop] = useState(false);
+  const Q2Ref: React.RefObject<HTMLButtonElement> = createRef();
+  const biodocRef: React.RefObject<HTMLButtonElement> = createRef();
+  const SliderLoop = () => {
+    console.log("chamou");
+    biodocRef.current?.scrollIntoView({ block: "nearest" });
+
+    setTimeout(() => {
+      Q2Ref.current?.scrollIntoView({ block: "nearest" });
+    }, 4000);
+  };
+
+  useEffect(() => {
+    setInterval(() => {
+      SliderLoop();
+    }, 8000);
+  }, []);
   return (
     <Container>
       <ContainerTitle>Lucas D'Elia Miranda de Andrade</ContainerTitle>
@@ -55,6 +72,7 @@ const HomeContent = () => {
 
       <Scroller>
         <ExperienceContainer
+          ref={Q2Ref}
           onClick={() => {
             window.location.href =
               "https://play.google.com/store/apps/details?id=br.com.quero2pay.q2bank";
@@ -83,6 +101,7 @@ const HomeContent = () => {
         </ExperienceContainer>
 
         <ExperienceContainer
+          ref={biodocRef}
           onClick={() => {
             window.location.href = "https://biodoc.com.br/";
           }}
