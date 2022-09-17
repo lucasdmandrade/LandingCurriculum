@@ -21,6 +21,12 @@ export const Container = styled.div`
   }
 `;
 
+export const PeronalPhotoContainer = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+`;
+
 export const PeronalPhoto = styled.img`
   width: 250px;
   border-radius: 50%;

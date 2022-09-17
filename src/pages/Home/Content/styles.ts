@@ -36,6 +36,7 @@ export const ContentTitle = styled.h2`
 `;
 
 export const Scroller = styled.div`
+  width: 80%;
   display: flex;
   flex-direction: row;
   overflow: auto;
@@ -46,6 +47,25 @@ export const Scroller = styled.div`
   }
   ::-webkit-scrollbar {
     display: none;
+  }
+`;
+
+export const ScrollerContainer = styled.div`
+  display: flex;
+  flex-direction: row;
+`;
+
+export const ScrollerButton = styled.button`
+  width: 10px;
+  border: none;
+
+  img {
+    width: 10px;
+  }
+
+  &:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+    cursor: pointer;
   }
 `;
 

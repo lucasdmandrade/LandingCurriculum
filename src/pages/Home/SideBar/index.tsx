@@ -18,13 +18,16 @@ import {
   SocialIconsContent,
   PeronalPhoto,
   ContentContainer,
+  PeronalPhotoContainer,
 } from "./styles";
 import DivisorContainer from "../../../components/DivisorComponent";
 
 const SideBar = () => {
   return (
     <Container>
-      <PeronalPhoto src={PersonalPhoto} alt="Instagram Logo" />
+      <PeronalPhotoContainer>
+        <PeronalPhoto src={PersonalPhoto} alt="Instagram Logo" />
+      </PeronalPhotoContainer>
       <DivisorContainer width="80%" justifyContent="center" />
 
       <ContentContainer>
