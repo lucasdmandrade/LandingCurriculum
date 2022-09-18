@@ -93,6 +93,8 @@ export const SocialIconsButton = styled.button`
   align-items: center;
   justify-content: center;
 
+  border: none;
+
   &:hover {
     cursor: pointer;
     transform: scale(1.1);

@@ -36,7 +36,6 @@ export const ContentTitle = styled.h2`
 `;
 
 export const Scroller = styled.div`
-  width: 80%;
   display: flex;
   flex-direction: row;
   overflow: auto;
@@ -53,14 +52,20 @@ export const Scroller = styled.div`
 export const ScrollerContainer = styled.div`
   display: flex;
   flex-direction: row;
+  align-items: center;
 `;
 
 export const ScrollerButton = styled.button`
-  width: 10px;
+  width: 30px;
+  height: 30px;
   border: none;
+  background-color: transparent;
+  border-radius: 50%;
+  align-items: center;
+  justify-content: center;
 
   img {
-    width: 10px;
+    width: 15px;
   }
 
   &:hover {

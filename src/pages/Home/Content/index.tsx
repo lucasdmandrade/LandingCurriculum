@@ -1,4 +1,4 @@
-import React, { createRef, useEffect, useRef, useState } from "react";
+import React, { createRef, useEffect } from "react";
 import DivisorComponent from "../../../components/DivisorComponent";
 import {
   AcademyComplement,
@@ -18,26 +18,37 @@ import {
   ScrollerContainer,
 } from "./styles";
 import rigthArrow from "../../../assets/rigthArrow.svg";
+import leftArrow from "../../../assets/leftArrow.svg";
 
 const HomeContent = () => {
   const Q2Ref: React.RefObject<HTMLButtonElement> = createRef();
   const biodocRef: React.RefObject<HTMLButtonElement> = createRef();
 
-  const MakeSliderScrollToBiodocStep = () => {
+  const SliderScrollToBiodocStep = () => {
     biodocRef.current?.scrollIntoView({ block: "nearest" });
   };
 
-  const MakeSliderScrollToQ2Step = () => {
+  const SliderScrollToQ2Step = () => {
     Q2Ref.current?.scrollIntoView({ block: "nearest" });
   };
 
-  const SliderLoop = () => {
-    setInterval(() => {
-      MakeSliderScrollToBiodocStep();
-      setTimeout(() => {
-        MakeSliderScrollToQ2Step();
-      }, 4000);
-    }, 8000);
+  const SliderScrollNext = () => {
+    SliderScrollToBiodocStep();
+  };
+
+  const SliderScrollPrevious = () => {
+    SliderScrollToQ2Step();
+  };
+
+  const SliderLoop = (stop?: boolean) => {
+    if (!stop) {
+      const loop = setInterval(() => {
+        SliderScrollToBiodocStep();
+        setTimeout(() => {
+          SliderScrollToQ2Step();
+        }, 4000);
+      }, 8000);
+    }
   };
 
   useEffect(() => {
@@ -81,6 +92,9 @@ const HomeContent = () => {
       <ContentTitle>Experiência</ContentTitle>
 
       <ScrollerContainer>
+        <ScrollerButton onClick={SliderScrollPrevious}>
+          <img src={leftArrow} alt="rigth arrow" />
+        </ScrollerButton>
         <Scroller>
           <ExperienceContainer
             ref={Q2Ref}
@@ -140,7 +154,7 @@ const HomeContent = () => {
             </ExperienceContainerDescritiveText>
           </ExperienceContainer>
         </Scroller>
-        <ScrollerButton>
+        <ScrollerButton onClick={SliderScrollNext}>
           <img src={rigthArrow} alt="rigth arrow" />
         </ScrollerButton>
       </ScrollerContainer>

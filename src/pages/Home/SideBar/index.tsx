@@ -97,7 +97,7 @@ const SideBar = () => {
                 "https://www.linkedin.com/in/lucas-andrade-b319a0191?jobid=1234";
             }}
           >
-            <img src={linkedinIcon} alt="linkedIn Logo" />
+            <img src={linkedinIcon} alt="linkedIn Logo" height={20} />
           </SocialIconsButton>
           <SocialIconsButton
             onClick={() => {
