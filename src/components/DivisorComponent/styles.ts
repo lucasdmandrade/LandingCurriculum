@@ -7,11 +7,15 @@ export const Container = styled.div<{ justifyContent?: string }>`
     justifyContent ? justifyContent : "flex-start"};
 `;
 
-export const Divisor = styled.hr<{ width: string; color?: string }>`
+export const Divisor = styled.hr<{
+  width: string;
+  color?: string;
+  removeMargin?: boolean;
+}>`
   display: flex;
   width: ${({ width }) => width};
   height: 0px;
   background-color: black;
-  margin: 30px 0 15px 0;
+  margin: ${({ removeMargin }) => (removeMargin ? 0 : "30px 0 15px 0")};
   border-color: ${({ color }) => color};
 `;

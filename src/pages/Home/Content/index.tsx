@@ -1,4 +1,4 @@
-import React, { createRef, useEffect } from "react";
+import React, { createRef, useCallback, useEffect, useState } from "react";
 import DivisorComponent from "../../../components/DivisorComponent";
 import {
   AcademyComplement,
@@ -16,44 +16,55 @@ import {
   Scroller,
   ScrollerButton,
   ScrollerContainer,
+  ScrollerPages,
+  ScrollerPaginationContainer,
 } from "./styles";
 import rigthArrow from "../../../assets/rigthArrow.svg";
 import leftArrow from "../../../assets/leftArrow.svg";
+import experiences from "./ExperiencesSliderContents";
+import { IExperience } from "./ExperiencesSliderContents/types";
 
 const HomeContent = () => {
-  const Q2Ref: React.RefObject<HTMLButtonElement> = createRef();
-  const biodocRef: React.RefObject<HTMLButtonElement> = createRef();
+  const [sliderIndex, setSliderIndex] = useState(0);
 
-  const SliderScrollToBiodocStep = () => {
-    biodocRef.current?.scrollIntoView({ block: "nearest" });
-  };
+  useEffect(() => {
+    console.log("sliderIndex", sliderIndex);
+  }, [sliderIndex]);
 
-  const SliderScrollToQ2Step = () => {
-    Q2Ref.current?.scrollIntoView({ block: "nearest" });
-  };
-
-  const SliderScrollNext = () => {
-    SliderScrollToBiodocStep();
-  };
+  const SliderScrollNext = useCallback(() => {
+    if (sliderIndex + 1 < experiences.length) {
+      experiences[sliderIndex + 1].ref.current?.scrollIntoView({
+        block: "nearest",
+      });
+      setSliderIndex(sliderIndex + 1);
+    }
+  }, [sliderIndex]);
 
   const SliderScrollPrevious = () => {
-    SliderScrollToQ2Step();
-  };
-
-  const SliderLoop = (stop?: boolean) => {
-    if (!stop) {
-      const loop = setInterval(() => {
-        SliderScrollToBiodocStep();
-        setTimeout(() => {
-          SliderScrollToQ2Step();
-        }, 4000);
-      }, 8000);
+    if (sliderIndex > 0) {
+      experiences[sliderIndex - 1].ref.current?.scrollIntoView({
+        block: "nearest",
+      });
+      setSliderIndex(sliderIndex - 1);
     }
   };
 
+  const SliderScrollFirst = () => {
+    experiences[0].ref.current?.scrollIntoView({
+      block: "nearest",
+    });
+    setSliderIndex(0);
+  };
+
   useEffect(() => {
-    SliderLoop();
-  }, []);
+    setTimeout(() => {
+      if (sliderIndex < experiences.length - 1) {
+        SliderScrollNext();
+      } else {
+        SliderScrollFirst();
+      }
+    }, 2000);
+  }, [SliderScrollNext, sliderIndex]);
 
   return (
     <Container>
@@ -96,68 +107,56 @@ const HomeContent = () => {
           <img src={leftArrow} alt="rigth arrow" />
         </ScrollerButton>
         <Scroller>
-          <ExperienceContainer
-            ref={Q2Ref}
-            onClick={() => {
-              window.location.href =
-                "https://play.google.com/store/apps/details?id=br.com.quero2pay.q2bank";
-            }}
-          >
-            <ExperienceContainerResumeText>
-              <ExperienceTitle>Quero2 Bank</ExperienceTitle>
-              <ExperienceDescription>Mobile developer</ExperienceDescription>
-              <ExperienceComplement>
-                Abril de 2022 - Present (5 meses)
-              </ExperienceComplement>
-              <ExperienceComplement isSmokly>
-                Franca, São Paulo, Brazil
-              </ExperienceComplement>
-            </ExperienceContainerResumeText>
-            <ExperienceContainerDescritiveText>
-              <ExperienceComplement>
-                {" "}
-                Trabalhei no desenvolvimento do aplicativo Q2 Bank, um banco
-                digital voltado para os credenciados da Q2 terem maior controle
-                de suas POS. Exercendo as atividades de desenvolvimento do front
-                end, deploy, criação de testes automatizados, criação de testes
-                end to end.
-              </ExperienceComplement>
-            </ExperienceContainerDescritiveText>
-          </ExperienceContainer>
-
-          <ExperienceContainer
-            ref={biodocRef}
-            onClick={() => {
-              window.location.href = "https://biodoc.com.br/";
-            }}
-          >
-            <ExperienceContainerResumeText>
-              <ExperienceTitle>CloudMed Tecnologia</ExperienceTitle>
-              <ExperienceDescription>Full Stack Engineer</ExperienceDescription>
-              <ExperienceComplement>
-                Outubro de 2021 - maio de 2022 (8 meses)
-              </ExperienceComplement>
-              <ExperienceComplement isSmokly>
-                Franca, São Paulo, Brasil
-              </ExperienceComplement>
-            </ExperienceContainerResumeText>
-            <ExperienceContainerDescritiveText>
-              <ExperienceComplement>
-                {" "}
-                Atuei no desenvolvimento da plataforma de compras da Unimed
-                realizando as atividades de desenvolvimento do front end,
-                criação de testes automatizados, correção de bugs no back end,
-                deploy e manutenção do projeto legado. Finalizada a plataforma
-                atuei no desenvolvimento de um sistema antifraude com
-                reconhecimento facial o desenvolvimento do front end e deploy.
-              </ExperienceComplement>
-            </ExperienceContainerDescritiveText>
-          </ExperienceContainer>
+          {experiences.map((experience: IExperience) => (
+            <ExperienceContainer
+              ref={experience.ref}
+              onClick={() => {
+                window.location.href = experience.link;
+              }}
+            >
+              <ExperienceContainerResumeText>
+                <ExperienceTitle>{experience.title}</ExperienceTitle>
+                <ExperienceDescription>
+                  {experience.description}
+                </ExperienceDescription>
+                <ExperienceComplement>
+                  {experience.complement}
+                </ExperienceComplement>
+                <ExperienceComplement isSmokly>
+                  {experience.region}
+                </ExperienceComplement>
+              </ExperienceContainerResumeText>
+              <ExperienceContainerDescritiveText>
+                <ExperienceComplement>
+                  {experience.descritiveText}
+                </ExperienceComplement>
+              </ExperienceContainerDescritiveText>
+            </ExperienceContainer>
+          ))}
         </Scroller>
+
         <ScrollerButton onClick={SliderScrollNext}>
           <img src={rigthArrow} alt="rigth arrow" />
         </ScrollerButton>
       </ScrollerContainer>
+      <ScrollerPaginationContainer>
+        {experiences.map((experience: IExperience, index) => (
+          <>
+            <ScrollerPages
+              onClick={() => {
+                experience.ref.current?.scrollIntoView({ block: "nearest" });
+                setSliderIndex(index);
+              }}
+              isActual={index === sliderIndex}
+            >
+              {index + 1}
+            </ScrollerPages>
+            {index === experiences.length - 1 || (
+              <DivisorComponent width="15px" color="#eeeeeecf" removeMargin />
+            )}
+          </>
+        ))}
+      </ScrollerPaginationContainer>
 
       <DivisorComponent width="100px" color="#eeeeee8d" />
 
