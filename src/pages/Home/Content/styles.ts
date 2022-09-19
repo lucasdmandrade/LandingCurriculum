@@ -124,6 +124,29 @@ export const ExperienceComplement = styled.h4<{ isSmokly?: boolean }>`
   color: ${({ isSmokly }) => (isSmokly ? "rgba(0,0,0,0.45)" : "black")};
 `;
 
+export const ScrollerPaginationContainer = styled.div`
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+`;
+
+export const ScrollerPages = styled.h4<{ isActual?: boolean }>`
+  width: 20px;
+  height: 20px;
+  text-align: center;
+  justify-content: center;
+  border: 1px solid transparent;
+  border-radius: 50%;
+  margin: 5px;
+  color: ${({ isActual }) => (isActual ? "blue" : "black")};
+
+  &:hover {
+    cursor: pointer;
+    border-radius: 25px;
+  }
+`;
+
 export const AcademyDescription = styled.h3`
   font-size: 15px;
   margin: 0;
