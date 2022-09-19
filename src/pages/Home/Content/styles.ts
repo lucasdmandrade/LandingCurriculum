@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import { isatty } from "tty";
 import { fontDefaultBold, fontDefaultBolder } from "../../../theme/text";
 
 export const Container = styled.div`
