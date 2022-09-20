@@ -1,0 +1,5 @@
+deployment:
+  tasks:
+    - npm run build
+    - export DEPLOYPATH=/home/cpanelUser/public_html/
+    - /bin/cp/build -R * $DEPLOYPATH
