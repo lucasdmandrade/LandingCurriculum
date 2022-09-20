@@ -1,5 +1,18 @@
----
-deployment:
-  tasks:
-    - export DEPLOYPATH=/home/user/public_html/
-    - /bin/cp -R $DEPLOYPATH
+version: 1
+frontend:
+  phases:
+    preBuild:
+      commands:
+        - npm install env-cmd
+        - npm ci
+    build:
+      commands:
+        - echo "I am running 🏃on Prod"
+        - npm run build
+  artifacts:
+    baseDirectory: build
+    files:
+      - "**/*"
+  cache:
+    paths:
+      - node_modules/**/*
