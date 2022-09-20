@@ -63,7 +63,7 @@ const HomeContent = () => {
       } else {
         SliderScrollFirst();
       }
-    }, 2000);
+    }, 4000);
   }, [SliderScrollNext, sliderIndex]);
 
   return (
