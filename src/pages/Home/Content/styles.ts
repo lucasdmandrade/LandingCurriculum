@@ -139,7 +139,8 @@ export const ScrollerPages = styled.h4<{ isActual?: boolean }>`
   border: 1px solid transparent;
   border-radius: 50%;
   margin: 5px;
-  color: ${({ isActual }) => (isActual ? "blue" : "black")};
+  background-color: ${({ isActual }) =>
+    isActual ? "rgba(0,0,0,0.25)" : "transparent"};
 
   &:hover {
     cursor: pointer;
