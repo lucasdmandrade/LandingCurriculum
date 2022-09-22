@@ -61,6 +61,7 @@ const SideBar = () => {
 
         <ContentTitle>React.js</ContentTitle>
         <ContentTitle>React Native</ContentTitle>
+        <ContentTitle>TypeScript</ContentTitle>
         <ContentTitle>JavaScript</ContentTitle>
         <ContentTitle>Complience</ContentTitle>
       </ContentContainer>

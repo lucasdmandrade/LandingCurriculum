@@ -88,7 +88,6 @@ export const ExperienceContainer = styled.button`
   animation: scrollingSlider 20s linear infinite;
 
   &:hover {
-    border: 1px solid black;
     cursor: pointer;
     background-color: rgba(0, 0, 0, 0.1);
     border-radius: 25px;
