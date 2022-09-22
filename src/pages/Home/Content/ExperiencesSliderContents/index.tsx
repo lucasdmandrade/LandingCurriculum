@@ -12,7 +12,7 @@ const experiences: IExperience[] = [
     complement: "Abril de 2022 - Present (6 meses)",
     region: "Franca, São Paulo, Brasil",
     descritiveText:
-      "Trabalhei no desenvolvimento do aplicativo Q2 Bank, um bancodigital voltado para os credenciados da Q2 terem maior controlede suas POS. Exercendo as atividades de desenvolvimento do frontend, deploy, criação de testes automatizados, criação de testes end to end.",
+      "Trabalhei no desenvolvimento do aplicativo Q2 Bank, um banco digital voltado para os credenciados da Q2 terem maior controle das suas POS. Exercendo as atividades de desenvolvimento do frontend, deploy, criação de testes automatizados e criação de testes end to end.",
   },
   {
     ref: biodocRef,
@@ -22,7 +22,7 @@ const experiences: IExperience[] = [
     complement: "Outubro de 2021 - maio de 2022 (8 meses)",
     region: "Franca, São Paulo, Brasil",
     descritiveText:
-      "Atuei no desenvolvimento da plataforma de compras da Unimedrealizando as atividades de desenvolvimento do front end,criação de testes automatizados, correção de bugs no back end, atuei no desenvolvimento de um sistema antifraude comreconhecimento facial o desenvolvimento do front end e deploy.",
+      "Atuei no desenvolvimento da plataforma de compras da Unimed realizando as atividades de desenvolvimento do front end, criação de testes automatizados, correção de bugs no back end, atuei no desenvolvimento de um sistema antifraude com reconhecimento facial o desenvolvimento do front end e deploy.",
   },
 ];
 

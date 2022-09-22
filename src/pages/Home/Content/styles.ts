@@ -147,6 +147,27 @@ export const ScrollerPages = styled.h4<{ isActual?: boolean }>`
   }
 `;
 
+export const ScrollerLockButton = styled.button`
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent;
+  border: none;
+  border-radius: 15px;
+
+  &:hover {
+    cursor: pointer;
+    background-color: rgba(0, 0, 0, 0.4);
+  }
+`;
+
+export const ScrollerButtonImg = styled.img`
+  width: 25px;
+  height: 25px;
+`;
+
 export const AcademyDescription = styled.h3`
   font-size: 15px;
   margin: 0;

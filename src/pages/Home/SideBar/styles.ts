@@ -57,7 +57,7 @@ export const ContentContainer = styled.div<{ hasAnimation?: boolean }>`
 
   &:hover {
     box-shadow: ${({ hasAnimation }) =>
-      hasAnimation ? "inset 260px 0 #fff" : "none"};
+      hasAnimation ? "inset 300px 0 #fff" : "none"};
     color: ${({ hasAnimation }) => (hasAnimation ? "#2c3050" : "none")};
     cursor: ${({ hasAnimation }) => (hasAnimation ? "pointer" : "")};
   }

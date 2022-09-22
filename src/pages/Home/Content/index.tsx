@@ -15,26 +15,38 @@ import {
   ExperienceTitle,
   Scroller,
   ScrollerButton,
+  ScrollerButtonImg,
   ScrollerContainer,
+  ScrollerLockButton,
   ScrollerPages,
   ScrollerPaginationContainer,
 } from "./styles";
 import rigthArrow from "../../../assets/rigthArrow.svg";
 import leftArrow from "../../../assets/leftArrow.svg";
+import padlockClosed from "../../../assets/padlockClosed.svg";
+import padlockOpen from "../../../assets/padlockOpen.svg";
+
 import experiences from "./ExperiencesSliderContents";
 import { IExperience } from "./ExperiencesSliderContents/types";
 
 const HomeContent = () => {
   const [sliderIndex, setSliderIndex] = useState(0);
+  const [isLoopPaused, setIsLoopPaused] = useState(false);
+  const [callLoop, setCallLoop] = useState(false);
 
-  const SliderScrollNext = useCallback(() => {
+  const handleIsLoopPaused = () => {
+    setIsLoopPaused(!isLoopPaused);
+  };
+
+  const SliderScrollNext = () => {
+    if (isLoopPaused) return;
     if (sliderIndex + 1 < experiences.length) {
       experiences[sliderIndex + 1].ref.current?.scrollIntoView({
         block: "nearest",
       });
       setSliderIndex(sliderIndex + 1);
     }
-  }, [sliderIndex]);
+  };
 
   const SliderScrollPrevious = () => {
     if (sliderIndex > 0) {
@@ -46,21 +58,30 @@ const HomeContent = () => {
   };
 
   const SliderScrollFirst = () => {
+    if (isLoopPaused) return;
     experiences[0].ref.current?.scrollIntoView({
       block: "nearest",
     });
     setSliderIndex(0);
   };
 
+  const sliderLoop = () => {
+    if (sliderIndex < experiences.length - 1) {
+      SliderScrollNext();
+    } else {
+      SliderScrollFirst();
+    }
+  };
+
   useEffect(() => {
     setTimeout(() => {
-      if (sliderIndex < experiences.length - 1) {
-        SliderScrollNext();
-      } else {
-        SliderScrollFirst();
-      }
-    }, 4000);
-  }, [SliderScrollNext, sliderIndex]);
+      setCallLoop(!callLoop);
+    }, 6000);
+  }, [callLoop]);
+
+  useEffect(() => {
+    sliderLoop();
+  }, [callLoop]);
 
   return (
     <Container>
@@ -131,7 +152,7 @@ const HomeContent = () => {
           ))}
         </Scroller>
 
-        <ScrollerButton onClick={SliderScrollNext}>
+        <ScrollerButton onClick={() => SliderScrollNext()}>
           <img src={rigthArrow} alt="rigth arrow" />
         </ScrollerButton>
       </ScrollerContainer>
@@ -154,7 +175,23 @@ const HomeContent = () => {
         ))}
       </ScrollerPaginationContainer>
 
-      <DivisorComponent width="100px" color="#eeeeee8d" />
+      <div style={{ display: "flex", justifyContent: "center" }}>
+        <ScrollerLockButton onClick={handleIsLoopPaused}>
+          {isLoopPaused ? (
+            <ScrollerButtonImg
+              src={padlockClosed}
+              alt="imagem de cadiado fechado"
+            />
+          ) : (
+            <ScrollerButtonImg
+              src={padlockOpen}
+              alt="imagem de cadiado aberto"
+            />
+          )}
+        </ScrollerLockButton>
+      </div>
+
+      <DivisorComponent width="100px" color="#eeeeee8d" removeMargin />
 
       <ContentTitle>Formação acadêmica</ContentTitle>
       <AcademyDescription>
