@@ -27,10 +27,6 @@ import { IExperience } from "./ExperiencesSliderContents/types";
 const HomeContent = () => {
   const [sliderIndex, setSliderIndex] = useState(0);
 
-  useEffect(() => {
-    console.log("sliderIndex", sliderIndex);
-  }, [sliderIndex]);
-
   const SliderScrollNext = useCallback(() => {
     if (sliderIndex + 1 < experiences.length) {
       experiences[sliderIndex + 1].ref.current?.scrollIntoView({
