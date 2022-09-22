@@ -4,5 +4,4 @@ build:
   image: nodejs
   tasks:
     - export DEPLOYPATH=/home/user/public_html/
-    - npm run build
     - /bin/cp build $DEPLOYPATH
