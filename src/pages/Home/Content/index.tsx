@@ -1,4 +1,10 @@
-import React, { createRef, useCallback, useEffect, useState } from "react";
+import React, {
+  createRef,
+  useCallback,
+  useEffect,
+  useRef,
+  useState,
+} from "react";
 import DivisorComponent from "../../../components/DivisorComponent";
 import {
   AcademyComplement,
@@ -6,6 +12,7 @@ import {
   Container,
   ContainerTitle,
   ContainerTitleDescription,
+  ContainerTitleDescriptionGradient,
   ContentTitle,
   ExperienceComplement,
   ExperienceContainer,
@@ -28,60 +35,13 @@ import padlockOpen from "../../../assets/padlockOpen.svg";
 
 import experiences from "./ExperiencesSliderContents";
 import { IExperience } from "./ExperiencesSliderContents/types";
+import Carousel from "nuka-carousel";
 
 const HomeContent = () => {
   const [sliderIndex, setSliderIndex] = useState(0);
   const [isLoopPaused, setIsLoopPaused] = useState(false);
   const [callLoop, setCallLoop] = useState(false);
-
-  const handleIsLoopPaused = () => {
-    setIsLoopPaused(!isLoopPaused);
-  };
-
-  const SliderScrollNext = () => {
-    if (isLoopPaused) return;
-    if (sliderIndex + 1 < experiences.length) {
-      experiences[sliderIndex + 1].ref.current?.scrollIntoView({
-        block: "nearest",
-      });
-      setSliderIndex(sliderIndex + 1);
-    }
-  };
-
-  const SliderScrollPrevious = () => {
-    if (sliderIndex > 0) {
-      experiences[sliderIndex - 1].ref.current?.scrollIntoView({
-        block: "nearest",
-      });
-      setSliderIndex(sliderIndex - 1);
-    }
-  };
-
-  const SliderScrollFirst = () => {
-    if (isLoopPaused) return;
-    experiences[0].ref.current?.scrollIntoView({
-      block: "nearest",
-    });
-    setSliderIndex(0);
-  };
-
-  const sliderLoop = () => {
-    if (sliderIndex < experiences.length - 1) {
-      SliderScrollNext();
-    } else {
-      SliderScrollFirst();
-    }
-  };
-
-  useEffect(() => {
-    setTimeout(() => {
-      setCallLoop(!callLoop);
-    }, 6000);
-  }, [callLoop]);
-
-  useEffect(() => {
-    sliderLoop();
-  }, [callLoop]);
+  const loopTimer = useRef(0);
 
   return (
     <Container>
@@ -95,6 +55,7 @@ const HomeContent = () => {
       </ContainerTitleDescription>
 
       <ContentTitle>Resumo</ContentTitle>
+
       <ContainerTitleDescription>
         Atualmente, inserido na área da programação, sou movido pelos estímulos
         dos projetos diários e pela busca de soluções únicas e inusitadas. Isso
@@ -119,79 +80,43 @@ const HomeContent = () => {
 
       <ContentTitle>Experiência</ContentTitle>
 
-      <ScrollerContainer>
-        <ScrollerButton onClick={SliderScrollPrevious}>
-          <img src={leftArrow} alt="rigth arrow" />
-        </ScrollerButton>
-        <Scroller>
-          {experiences.map((experience: IExperience) => (
-            <ExperienceContainer
-              ref={experience.ref}
-              onClick={() => {
-                window.location.href = experience.link;
-              }}
-            >
-              <ExperienceContainerResumeText>
-                <ExperienceTitle>{experience.title}</ExperienceTitle>
-                <ExperienceDescription>
-                  {experience.description}
-                </ExperienceDescription>
-                <ExperienceComplement>
-                  {experience.complement}
-                </ExperienceComplement>
-                <ExperienceComplement isSmokly>
-                  {experience.region}
-                </ExperienceComplement>
-              </ExperienceContainerResumeText>
-              <ExperienceContainerDescritiveText>
-                <ExperienceComplement>
-                  {experience.descritiveText}
-                </ExperienceComplement>
-              </ExperienceContainerDescritiveText>
-            </ExperienceContainer>
-          ))}
-        </Scroller>
-
-        <ScrollerButton onClick={() => SliderScrollNext()}>
-          <img src={rigthArrow} alt="rigth arrow" />
-        </ScrollerButton>
-      </ScrollerContainer>
-      <ScrollerPaginationContainer>
-        {experiences.map((experience: IExperience, index) => (
-          <>
-            <ScrollerPages
-              onClick={() => {
-                experience.ref.current?.scrollIntoView({ block: "nearest" });
-                setSliderIndex(index);
-              }}
-              isActual={index === sliderIndex}
-            >
-              {index + 1}
-            </ScrollerPages>
-            {index === experiences.length - 1 || (
-              <DivisorComponent width="15px" color="#eeeeeecf" removeMargin />
-            )}
-          </>
+      <Carousel
+        defaultControlsConfig={{
+          nextButtonStyle: { display: "none" },
+          prevButtonStyle: { display: "none" },
+          pagingDotsStyle: { marginTop: "15px" },
+        }}
+        style={{ padding: "0 30px" }}
+      >
+        {experiences.map((experience: IExperience) => (
+          <ExperienceContainer
+            ref={experience.ref}
+            onClick={() => {
+              window.location.href = experience.link;
+            }}
+          >
+            <ExperienceContainerResumeText>
+              <ExperienceTitle>{experience.title}</ExperienceTitle>
+              <ExperienceDescription>
+                {experience.description}
+              </ExperienceDescription>
+              <ExperienceComplement>
+                {experience.complement}
+              </ExperienceComplement>
+              <ExperienceComplement isSmokly>
+                {experience.region}
+              </ExperienceComplement>
+            </ExperienceContainerResumeText>
+            <ExperienceContainerDescritiveText>
+              <ExperienceComplement>
+                {experience.descritiveText}
+              </ExperienceComplement>
+            </ExperienceContainerDescritiveText>
+          </ExperienceContainer>
         ))}
-      </ScrollerPaginationContainer>
+      </Carousel>
 
-      <div style={{ display: "flex", justifyContent: "center" }}>
-        <ScrollerLockButton onClick={handleIsLoopPaused}>
-          {isLoopPaused ? (
-            <ScrollerButtonImg
-              src={padlockClosed}
-              alt="imagem de cadiado fechado"
-            />
-          ) : (
-            <ScrollerButtonImg
-              src={padlockOpen}
-              alt="imagem de cadiado aberto"
-            />
-          )}
-        </ScrollerLockButton>
-      </div>
-
-      <DivisorComponent width="100px" color="#eeeeee8d" removeMargin />
+      <DivisorComponent width="100px" color="#eeeeee8d" />
 
       <ContentTitle>Formação acadêmica</ContentTitle>
       <AcademyDescription>
@@ -201,6 +126,36 @@ const HomeContent = () => {
         Curso Superior de Tecnologia (CST), Análise e desenvolvimento de
         sistemas · (julho de 2019)
       </AcademyComplement>
+
+      <DivisorComponent width="100px" color="#eeeeee8d" />
+      <ContentTitle>Meu começo na programação</ContentTitle>
+      <ContainerTitleDescriptionGradient>
+        “There is no single development, in either technology or management
+        technique, which by itself promises even one order-of-magnitude
+        improvement within a decade in productivity, in reliability, in
+        simplicity” — Frederick P. Brooks, Jr. {<br />} Esta frase representa a
+        minha visão sobre programação, pois não existe uma única solução para os
+        problemas ou um único método para os objetivos. E, pensando nos
+        objetivos de um jovem, aos seus 18 anos, a escolha profissional era a
+        minha meta. Embora não tendo tanta certeza de tais escolhas, a área de
+        programação sempre fez parte de minha história. Cresci em meio a
+        dispositivos, aparatos tecnológicos e adaptações para a automação.
+        Projetos sobre programação foram cenas de minha infância. E, estando em
+        formação, na área de desenvolvimento, projetos diários surgem como
+        desafios novos, buscando soluções únicas e encontrando caminhos
+        inusitados cujas soluções nem sempre podem ser previstas. Isso é o que
+        me move nessa área, pois o diferente leva o desenvolvedor a mergulhar de
+        cabeça e não existe cansaço ou monotonia. O desafio renova as forças
+        para o conhecimento constante. Também encaro a mudança como algo
+        necessário para o crescimento humano e profissional e entendo que o
+        esforço constante e diário é o caminho para a permanência. Sou simplista
+        e interativo. Gosto de encarar cada projeto como um desafio novo, pois
+        sempre quero resolvê-los da forma mais eficiente possível. Entendo que
+        já existem caminhos pensados, mas a resolução por métodos mais eficazes
+        deve ser uma estratégia no cotidiano do desenvolvedor, pois como
+        simplista e interativo, gosto de escolher pelo viés da prática agregando
+        visões do outro. Desse modo, prefiro, normalmente, trabalhar em grupos.
+      </ContainerTitleDescriptionGradient>
     </Container>
   );
 };

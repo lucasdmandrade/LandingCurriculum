@@ -18,6 +18,17 @@ export const ContainerTitle = styled.h1`
   font: ${fontDefaultBold};
 `;
 
+export const ContainerTitleDescriptionGradient = styled.h3<{}>`
+  background-image: linear-gradient(to bottom, black, transparent);
+
+  background-clip: text;
+  -webkit-background-clip: text;
+
+  -webkit-text-fill-color: transparent;
+
+  color: black;
+`;
+
 export const ContainerTitleDescription = styled.h3<{
   isSmokly?: boolean;
   haveMarginTop?: boolean;
@@ -38,15 +49,6 @@ export const ContentTitle = styled.h2`
 export const Scroller = styled.div`
   display: flex;
   flex-direction: row;
-  overflow: auto;
-  scroll-snap-type: x mandatory;
-  scroll-behavior: smooth;
-  :target {
-    scroll-margin-inline: initial;
-  }
-  ::-webkit-scrollbar {
-    display: none;
-  }
 `;
 
 export const ScrollerContainer = styled.div`
@@ -76,7 +78,6 @@ export const ScrollerButton = styled.button`
 
 export const ExperienceContainer = styled.button`
   min-width: 100%;
-  scroll-snap-align: start;
   display: flex;
   align-items: center;
   margin: 10px 0 0 0;
@@ -85,12 +86,11 @@ export const ExperienceContainer = styled.button`
   background-color: transparent;
   text-align: left;
   border: 1px solid transparent;
-  animation: scrollingSlider 20s linear infinite;
+  border-radius: 15px;
 
   &:hover {
     cursor: pointer;
     background-color: rgba(0, 0, 0, 0.1);
-    border-radius: 25px;
   }
 `;
 
@@ -102,7 +102,7 @@ export const ExperienceContainerDescritiveText = styled.div`
 `;
 
 export const ExperienceContainerResumeText = styled.div`
-  width: 30%;
+  padding: 10px;
   display: flex;
   flex-direction: column;
 `;
