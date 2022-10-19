@@ -10,6 +10,7 @@ export const Container = styled.div`
   background-color: #1d1d1f;
   opacity: 0.95;
   justify-content: center;
+  z-index: 999;
 `;
 
 export const NavLink = styled(Link)`

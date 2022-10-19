@@ -12,7 +12,7 @@ const AppRoutes = () => {
         <Header />
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/proficional" element={<Professional />} />
+          <Route path="/professional" element={<Professional />} />
         </Routes>
       </BrowserRouter>
     </>
