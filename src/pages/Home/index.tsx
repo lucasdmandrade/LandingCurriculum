@@ -7,10 +7,12 @@ import { Container } from "./styles";
 const Home = () => {
   return (
     <MainContainer>
+      <Container>
       <SideBar />
       <HomeContent />
+      </Container>
     </MainContainer>
-  );
+  );  
 };
 
 export default Home;

@@ -16,6 +16,15 @@ const Header = () => {
         removeBorder
       />
       <NavLink to="/">Curriculo</NavLink>
+      <DivisorComponent
+        width="1px"
+        height="70%"
+        removeMargin
+        backgroundColor="white"
+        color="transparent"
+        justifyContent="center"
+        removeBorder
+      />
       <NavLink to="/professional">Proficional</NavLink>
     </Container>
   );
