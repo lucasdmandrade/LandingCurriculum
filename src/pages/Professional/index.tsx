@@ -13,6 +13,7 @@ import {
 import Q2bank from "../../assets/images/q2bank.png";
 import CloudMed from "../../assets/images/cloudmed.png";
 import Tenda from "../../assets/images/tenda.png";
+import Fatec from "../../assets/images/fatec.png";
 
 const Professional = () => {
   return (
@@ -37,7 +38,7 @@ const Professional = () => {
       </Container>
       <Container>
         <ImageContainer>
-          <ImageContent src={CloudMed} alt="Imagem do app q2bank" />
+          <ImageContent src={CloudMed} alt="Imagem da logo da CloudMed" />
         </ImageContainer>
         <TextContainer>
           <TextRole>Desenvolvedor full stack</TextRole>
@@ -56,7 +57,18 @@ const Professional = () => {
       </Container>
       <Container>
         <ImageContainer>
-          <ImageContent src={Tenda} alt="Imagem do app q2bank" />
+          <ImageContent
+            src={Tenda}
+            alt="Imagem Imagem da logo da comunidade tenda"
+          />
+        </ImageContainer>
+        <TextContainer>
+          <h1>Teste</h1>
+        </TextContainer>
+      </Container>
+      <Container>
+        <ImageContainer>
+          <ImageContent src={Fatec} alt="Imagem da logo da fatec franca" />
         </ImageContainer>
         <TextContainer>
           <h1>Teste</h1>

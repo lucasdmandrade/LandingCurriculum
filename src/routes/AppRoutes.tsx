@@ -4,11 +4,13 @@ import Header from "../components/Header";
 
 import Home from "../pages/Home";
 import Professional from "../pages/Professional";
+import ScrollToTop from "../utils/ScrollToTop";
 
 const AppRoutes = () => {
   return (
     <>
       <BrowserRouter>
+        <ScrollToTop />
         <Header />
         <Routes>
           <Route path="/" element={<Home />} />
