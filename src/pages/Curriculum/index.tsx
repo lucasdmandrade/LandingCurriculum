@@ -4,15 +4,15 @@ import HomeContent from "./Content";
 import SideBar from "./SideBar";
 import { Container } from "./styles";
 
-const Home = () => {
+const Curriculum = () => {
   return (
     <MainContainer>
       <Container>
-      <SideBar />
-      <HomeContent />
+        <SideBar />
+        <HomeContent />
       </Container>
     </MainContainer>
-  );  
+  );
 };
 
-export default Home;
+export default Curriculum;

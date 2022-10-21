@@ -63,7 +63,18 @@ const Professional = () => {
           />
         </ImageContainer>
         <TextContainer>
-          <h1>Teste</h1>
+          <TextRole>Gerente de projeto/Desenvolvedor full stack</TextRole>
+          <TextActivities>
+            <BeBold>Linguagens/Frameworks:</BeBold> JavaScript, HTML, CSS,
+            React, TypeScript, Node.
+          </TextActivities>
+          <TextContent>
+            Foi selecionada a comunidade Tenda para o desenvolvimento de um
+            sistema Web, objetivando facilitar a gestão de escalas dos membros
+            da comunidade. Atualmente a comunidade possui mais de mil casais, e
+            produz vários eventos nos quais esses casais participam e precisam
+            ser divididos em grupos com complexas regras organizacionais.
+          </TextContent>
         </TextContainer>
       </Container>
       <Container>
@@ -71,7 +82,17 @@ const Professional = () => {
           <ImageContent src={Fatec} alt="Imagem da logo da fatec franca" />
         </ImageContainer>
         <TextContainer>
-          <h1>Teste</h1>
+          <TextRole>Analise e Desenvolvimento de Sistemas</TextRole>
+
+          <TextContent>
+            Cursndo Analise e Desenolvimento de Sistemas visando me consolidar
+            como desenvolvedor. Durante o curso atuei como tesoureiro do
+            Diretório Academico, Monitor de Algoritos e lógica da programação e
+            participei de uma iniciação cientifica buscando analisar as
+            vantagens da criação de Orteses e Proteses em impressão 3D com
+            custos minimos e aumentando o acesso de pessoas com necessidades a
+            uma melhor qualidade de vida
+          </TextContent>
         </TextContainer>
       </Container>
     </MainContainer>

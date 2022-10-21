@@ -2,7 +2,7 @@ import React from "react";
 import { Route, BrowserRouter, Routes } from "react-router-dom";
 import Header from "../components/Header";
 
-import Home from "../pages/Home";
+import Home from "../pages/Curriculum";
 import Professional from "../pages/Professional";
 import ScrollToTop from "../utils/ScrollToTop";
 

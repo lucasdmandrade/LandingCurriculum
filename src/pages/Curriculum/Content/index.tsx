@@ -37,7 +37,7 @@ import experiences from "./ExperiencesSliderContents";
 import { IExperience } from "./ExperiencesSliderContents/types";
 import Carousel from "nuka-carousel";
 
-const HomeContent = () => {
+const CurriculumContent = () => {
   const [sliderIndex, setSliderIndex] = useState(0);
   const [isLoopPaused, setIsLoopPaused] = useState(false);
   const [callLoop, setCallLoop] = useState(false);
@@ -160,4 +160,4 @@ const HomeContent = () => {
   );
 };
 
-export default HomeContent;
+export default CurriculumContent;
