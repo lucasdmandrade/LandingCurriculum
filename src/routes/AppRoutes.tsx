@@ -2,7 +2,8 @@ import React from "react";
 import { Route, BrowserRouter, Routes } from "react-router-dom";
 import Header from "../components/Header";
 
-import Home from "../pages/Curriculum";
+import Home from "../pages/Home";
+import Curriculum from "../pages/Curriculum";
 import Professional from "../pages/Professional";
 import ScrollToTop from "../utils/ScrollToTop";
 
@@ -14,6 +15,7 @@ const AppRoutes = () => {
         <Header />
         <Routes>
           <Route path="/" element={<Home />} />
+          <Route path="/curriculum" element={<Curriculum />} />
           <Route path="/professional" element={<Professional />} />
         </Routes>
       </BrowserRouter>

@@ -15,7 +15,7 @@ const Header = () => {
         justifyContent="center"
         removeBorder
       />
-      <NavLink to="/">Curriculo</NavLink>
+      <NavLink to="/">Home</NavLink>
       <DivisorComponent
         width="1px"
         height="70%"
@@ -25,7 +25,7 @@ const Header = () => {
         justifyContent="center"
         removeBorder
       />
-      <NavLink to="/professional">Proficional</NavLink>
+      <NavLink to="/curriculum">Curriculo</NavLink>
     </Container>
   );
 };

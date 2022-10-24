@@ -1,7 +1,13 @@
 import { Container } from "./styles";
 
-const MainContainer = ({ children }: { children: React.ReactNode }) => {
-  return <Container>{children}</Container>;
+const MainContainer = ({
+  children,
+  RemovePadding,
+}: {
+  children: React.ReactNode;
+  RemovePadding?: boolean;
+}) => {
+  return <Container RemovePadding={RemovePadding}>{children}</Container>;
 };
 
 export default MainContainer;
