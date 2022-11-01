@@ -25,7 +25,7 @@ export const NavArea = styled.div`
     hr {
       width: 1px;
       max-width: 1px;
-      transition-duration: 0.7s;
+      transition-duration: 0.6s;
       transform: scaleX(45);
     }
   }
