@@ -1,6 +1,8 @@
 import React from "react";
 import MainContainer from "../../components/MainContainer";
 import PersonalPhoto from "../../assets/personalPhoto.jpg";
+import happyDeveloper from "../../assets/happyDeveloper.svg";
+
 import {
   Container,
   ImageContainer,
@@ -14,7 +16,7 @@ const Curriculum = () => {
     <MainContainer RemovePadding>
       <Container>
         <ImageContainer>
-          <ImageContent src={PersonalPhoto} alt="Imagem de perfil" />
+          <ImageContent src={happyDeveloper} alt="Imagem de perfil" />
         </ImageContainer>
         <TextContainer>
           <TextContent>
@@ -26,9 +28,7 @@ const Curriculum = () => {
             possibilidades me motivam à dedicação às minhas metas, sendo que o
             desafio renova minhas forças para o conhecimento constante. Dessa
             forma, busco confeccionar meus projetos de maneira eficiente, por
-            meio de métodos pensados estrategicamente. Alinhado a isso, minhas
-            competências incluem: Desenvolvimento front-end, back-end e mobile.
-            Usando as stacks: React.js, React Native, JavaScript e TypeScript.
+            meio de métodos pensados estrategicamente.
           </TextContent>
         </TextContainer>
       </Container>

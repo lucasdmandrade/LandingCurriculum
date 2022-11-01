@@ -1,6 +1,5 @@
 import styled from "styled-components";
 import { fontDefaultLigth } from "../../theme/text";
-import BackGroundCode from "../../assets/images/backGroundCode.webp";
 
 export const Container = styled.div`
   height: 100vh;
@@ -8,7 +7,7 @@ export const Container = styled.div`
   margin: 0;
   font-family: ${fontDefaultLigth};
   font-weight: lighter;
-  background-image: url(${BackGroundCode});
+  background-color: #161617;
 `;
 
 export const ImageContainer = styled.div`
@@ -20,7 +19,6 @@ export const ImageContainer = styled.div`
 
 export const ImageContent = styled.img`
   width: 400px;
-  border-radius: 50%;
 `;
 
 export const TextContainer = styled.div`
@@ -34,9 +32,15 @@ export const TextContainer = styled.div`
 `;
 
 export const TextContent = styled.h2`
+  width: 500px;
+  background-color: #f2f3f5;
+  padding: 15px;
+  border-radius: 15px;
+  box-shadow: 0px 0px 10px #f2f3f5;
   font-family: "SF Pro Text", "SF Pro Icons", "Helvetica Neue", "Helvetica",
     "Arial", sans-serif;
+  text-align: center;
   font-size: 1.5em;
   font-weight: 600;
-  color: white;
+  color: #666666;
 `;

@@ -1,11 +1,17 @@
 import { Link } from "react-router-dom";
 import DivisorComponent from "../DivisorComponent";
-import { Container, NavLink } from "./styles";
+import { Container, NavArea, NavLink, NavLinkUnderline } from "./styles";
+import { useLocation } from "react-router-dom";
 
 const Header = () => {
+  const location = useLocation();
+
   return (
     <Container>
-      <NavLink to="/professional">Proficional</NavLink>
+      <NavArea>
+        <NavLink to="/professional">Proficional</NavLink>
+        <NavLinkUnderline isActive={location.pathname === "/professional"} />
+      </NavArea>
       <DivisorComponent
         width="1px"
         height="70%"
@@ -15,7 +21,11 @@ const Header = () => {
         justifyContent="center"
         removeBorder
       />
-      <NavLink to="/">Home</NavLink>
+      <NavArea>
+        <NavLink to="/">Home</NavLink>
+        <NavLinkUnderline isActive={location.pathname === "/"} />
+      </NavArea>
+
       <DivisorComponent
         width="1px"
         height="70%"
@@ -25,7 +35,10 @@ const Header = () => {
         justifyContent="center"
         removeBorder
       />
-      <NavLink to="/curriculum">Curriculo</NavLink>
+      <NavArea>
+        <NavLink to="/curriculum">Curriculo</NavLink>
+        <NavLinkUnderline isActive={location.pathname === "/curriculum  "} />
+      </NavArea>
     </Container>
   );
 };

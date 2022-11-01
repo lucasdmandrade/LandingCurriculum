@@ -37,7 +37,7 @@ export const TextContainer = styled.div`
   display: flex;
   flex-direction: column;
   width: 50vw;
-  background-color: #d3d3d3;
+  background-color: #f2f3f5;
   align-items: center;
   justify-content: center;
   padding: 5px 20px;
