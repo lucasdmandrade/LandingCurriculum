@@ -32,7 +32,9 @@ const Professional = () => {
             Trabalhei no desenvolvimento do aplicativo Q2 Bank, um banco digital
             voltado para os credenciados da Q2 terem maior controle das suas
             POS. Exercendo as atividades de desenvolvimento do frontend, deploy,
-            criação de testes automatizados e criação de testes end to end.
+            criação de testes automatizados, criação de testes end to end,
+            discovery de novas tecnologias e planejamento da arquitetura do
+            sistema.
           </TextContent>
         </TextContainer>
       </Container>
@@ -49,9 +51,10 @@ const Professional = () => {
           <TextContent>
             Atuei no desenvolvimento da plataforma de compras da Unimed
             realizando as atividades de desenvolvimento do front end, criação de
-            testes automatizados, correção de bugs no back end, atuei no
-            desenvolvimento de um sistema antifraude com reconhecimento facial o
-            desenvolvimento do front end e deploy.
+            testes automatizados e correção de bugs no back end. Após isso
+            participei do desenvolvimento de um sistema antifraude com
+            reconhecimento facial, sendo responsavel pelo desenvolvimento do
+            front end e deploy.
           </TextContent>
         </TextContainer>
       </Container>
@@ -70,10 +73,10 @@ const Professional = () => {
           </TextActivities>
           <TextContent>
             Foi selecionada a comunidade Tenda para o desenvolvimento de um
-            sistema Web, objetivando facilitar a gestão de escalas dos membros
-            da comunidade. Atualmente a comunidade possui mais de mil casais, e
+            sistema Web, visando facilitar a gestão de escalas dos membros da
+            comunidade. Atualmente a comunidade possui mais de mil casais, e
             produz vários eventos nos quais esses casais participam e precisam
-            ser divididos em grupos com complexas regras organizacionais.
+            ser divididos em equipes com complexas regras organizacionais.
           </TextContent>
         </TextContainer>
       </Container>
@@ -85,13 +88,15 @@ const Professional = () => {
           <TextRole>Analise e Desenvolvimento de Sistemas</TextRole>
 
           <TextContent>
-            Cursndo Analise e Desenolvimento de Sistemas visando me consolidar
-            como desenvolvedor. Durante o curso atuei como tesoureiro do
-            Diretório Academico, Monitor de Algoritos e lógica da programação e
-            participei de uma iniciação cientifica buscando analisar as
-            vantagens da criação de Orteses e Proteses em impressão 3D com
-            custos minimos e aumentando o acesso de pessoas com necessidades a
-            uma melhor qualidade de vida
+            Curso Analise e Desenolvimento de Sistemas visando expandir meus
+            conhecimentos a respeito do desenvolvimento de sistemas. Durante o
+            curso atuei como tesoureiro do Diretório Academico, Monitor de
+            Algoritos e lógica da programação e participei de uma iniciação
+            cientifica. O objetivo da iniciação cientifica foi realizar um
+            levantamento a respeito das vantagens e desvantagens da criação de
+            Orteses e Proteses em impressão 3D, seus custos e a possibilidade de
+            aumentar o acesso de pessoas com necessidades a uma melhor qualidade
+            de vida
           </TextContent>
         </TextContainer>
       </Container>

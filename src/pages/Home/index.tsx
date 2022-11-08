@@ -22,7 +22,7 @@ const Curriculum = () => {
           <TextContent>
             Atualmente, inserido na área da programação, sou movido pelos
             estímulos dos projetos diários e pela busca de soluções únicas e
-            inusitadas. Isso se deve, pois, na área de desenvolvimento de
+            inusitadas. Isso se deve porque na área do desenvolvimento de
             softwares não existe uma única resposta para as situações ou uma
             única forma de atingir seus objetivos. Logo, as várias
             possibilidades me motivam à dedicação às minhas metas, sendo que o

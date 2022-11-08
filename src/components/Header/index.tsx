@@ -37,7 +37,7 @@ const Header = () => {
       />
       <NavArea>
         <NavLink to="/curriculum">Curriculo</NavLink>
-        <NavLinkUnderline isActive={location.pathname === "/curriculum  "} />
+        <NavLinkUnderline isActive={location.pathname === "/curriculum"} />
       </NavArea>
     </Container>
   );

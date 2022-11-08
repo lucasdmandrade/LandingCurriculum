@@ -19,6 +19,11 @@ export const ImageContainer = styled.div`
 
 export const ImageContent = styled.img`
   width: 400px;
+
+  &:hover {
+    transform: perspective(600px) rotateZ(360deg);
+    transition-duration: 1s;
+  }
 `;
 
 export const TextContainer = styled.div`
@@ -43,4 +48,9 @@ export const TextContent = styled.h2`
   font-size: 1.5em;
   font-weight: 600;
   color: #666666;
+
+  &:hover {
+    transform: perspective(600px) rotateY(360deg);
+    transition-duration: 2s;
+  }
 `;
