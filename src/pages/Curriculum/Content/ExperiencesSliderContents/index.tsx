@@ -9,7 +9,7 @@ const experiences: IExperience[] = [
     link: "https://play.google.com/store/apps/details?id=br.com.quero2pay.q2bank",
     title: "Quero2 Bank",
     description: "Mobile developer",
-    complement: "Abril de 2022 - Present (6 meses)",
+    complement: "Abril de 2022 - Present (8 meses)",
     region: "Franca, São Paulo, Brasil",
     descritiveText:
       "Trabalhei no desenvolvimento do aplicativo Q2 Bank, um banco digital voltado para os credenciados da Q2 terem maior controle das suas POS. Exercendo as atividades de desenvolvimento do frontend, deploy, criação de testes automatizados e criação de testes end to end.",

@@ -18,12 +18,10 @@ import {
   ExperienceContainer,
   ExperienceContainerDescritiveText,
   ExperienceContainerResumeText,
+  ExperienceContent,
   ExperienceDescription,
   ExperienceTitle,
-  Scroller,
-  ScrollerButton,
   ScrollerButtonImg,
-  ScrollerContainer,
   ScrollerLockButton,
   ScrollerPages,
   ScrollerPaginationContainer,
@@ -45,13 +43,9 @@ const CurriculumContent = () => {
 
   return (
     <Container>
-      <ContainerTitle>Lucas D'Elia Miranda de Andrade</ContainerTitle>
-      <ContainerTitleDescription>
+      <ContainerTitle>Lucas Andrade</ContainerTitle>
+      <ContainerTitleDescription removeMarginTop>
         Front-end developer at Q2 Bank
-      </ContainerTitleDescription>
-
-      <ContainerTitleDescription isSmokly>
-        Franca, São Paulo, Brasil
       </ContainerTitleDescription>
 
       <ContentTitle>Resumo</ContentTitle>
@@ -69,7 +63,7 @@ const CurriculumContent = () => {
         back-end e mobile. Usando as stacks: React.js, React Native e
         JavaScript.
       </ContainerTitleDescription>
-      <ContainerTitleDescription haveMarginTop>
+      <ContainerTitleDescription removeMarginTop>
         “There is no single development, in either technology or management
         technique, which by itself promises even one order-of magnitude
         improvement within a decade in productivity, in reliability, in
@@ -80,41 +74,20 @@ const CurriculumContent = () => {
 
       <ContentTitle>Experiência</ContentTitle>
 
-      <Carousel
-        defaultControlsConfig={{
-          nextButtonStyle: { display: "none" },
-          prevButtonStyle: { display: "none" },
-          pagingDotsStyle: { marginTop: "15px" },
-        }}
-        style={{ padding: "0 30px" }}
-      >
-        {experiences.map((experience: IExperience) => (
-          <ExperienceContainer
-            ref={experience.ref}
-            onClick={() => {
-              window.location.href = experience.link;
-            }}
-          >
-            <ExperienceContainerResumeText>
-              <ExperienceTitle>{experience.title}</ExperienceTitle>
-              <ExperienceDescription>
-                {experience.description}
-              </ExperienceDescription>
-              <ExperienceComplement>
-                {experience.complement}
-              </ExperienceComplement>
-              <ExperienceComplement isSmokly>
-                {experience.region}
-              </ExperienceComplement>
-            </ExperienceContainerResumeText>
-            <ExperienceContainerDescritiveText>
-              <ExperienceComplement>
-                {experience.descritiveText}
-              </ExperienceComplement>
-            </ExperienceContainerDescritiveText>
-          </ExperienceContainer>
-        ))}
-      </Carousel>
+      {experiences.map((experience: IExperience) => (
+        <ExperienceContent>
+          <ExperienceContainerResumeText>
+            <ExperienceTitle>{experience.title}</ExperienceTitle>
+            <ExperienceDescription>
+              {experience.description}
+            </ExperienceDescription>
+            <ExperienceComplement>{experience.complement}</ExperienceComplement>
+            <ExperienceComplement isSmokly>
+              {experience.region}
+            </ExperienceComplement>
+          </ExperienceContainerResumeText>
+        </ExperienceContent>
+      ))}
 
       <DivisorComponent width="100px" color="#eeeeee8d" />
 

@@ -34,6 +34,11 @@ export const TextContainer = styled.div`
   justify-content: center;
   padding: 5px 20px;
   text-align: center;
+
+  &:hover :first-child {
+    transform: perspective(600px) rotateY(360deg);
+    transition-duration: 2s;
+  }
 `;
 
 export const TextContent = styled.h2`
@@ -45,12 +50,7 @@ export const TextContent = styled.h2`
   font-family: "SF Pro Text", "SF Pro Icons", "Helvetica Neue", "Helvetica",
     "Arial", sans-serif;
   text-align: center;
-  font-size: 1.5em;
+  font-size: 1.4em;
   font-weight: 600;
   color: #666666;
-
-  &:hover {
-    transform: perspective(600px) rotateY(360deg);
-    transition-duration: 2s;
-  }
 `;

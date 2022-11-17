@@ -14,6 +14,8 @@ export const Container = styled.div`
   margin: 0;
   padding: 15px;
   color: #ffffff;
+  font-family: "SF Pro Text", "SF Pro Icons", "Helvetica Neue", "Helvetica",
+    "Arial", sans-serif;
 
   a {
     color: #ffffff;
@@ -33,8 +35,7 @@ export const PeronalPhoto = styled.img`
 `;
 
 export const ContainerTitle = styled.h1`
-  font: ${fontDefaultBold};
-  font-size: 20px;
+  font-size: 1.2em;
 `;
 
 export const ContactsContainer = styled.div`
@@ -64,13 +65,11 @@ export const ContentContainer = styled.div<{ hasAnimation?: boolean }>`
 `;
 
 export const ContentTitle = styled.h2`
-  font: ${fontDefaultLigth};
   font-size: 17px;
   margin-left: 5px;
 `;
 
 export const Content = styled.h3`
-  font: ${fontDefaultligther};
   font-size: 15px;
   margin: 0;
   margin-left: 5px;
