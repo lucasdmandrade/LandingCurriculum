@@ -15,15 +15,16 @@ export const ImageContainer = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
+
+  &:hover :first-child {
+    transform: rotateZ(360deg);
+    transition-duration: 1s;
+  }
 `;
 
 export const ImageContent = styled.img`
   width: 400px;
-
-  &:hover {
-    transform: perspective(600px) rotateZ(360deg);
-    transition-duration: 1s;
-  }
+  height: 400px;
 `;
 
 export const TextContainer = styled.div`
