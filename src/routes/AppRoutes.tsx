@@ -6,6 +6,7 @@ import Home from "../pages/Home";
 import Curriculum from "../pages/Curriculum";
 import Professional from "../pages/Professional";
 import ScrollToTop from "../utils/ScrollToTop";
+import Emulator from "../pages/Emulator";
 
 const AppRoutes = () => {
   return (
@@ -17,6 +18,7 @@ const AppRoutes = () => {
           <Route path="/" element={<Home />} />
           <Route path="/curriculum" element={<Curriculum />} />
           <Route path="/professional" element={<Professional />} />
+          <Route path="/emulador" element={<Emulator />} />
         </Routes>
       </BrowserRouter>
     </>

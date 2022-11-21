@@ -8,10 +8,6 @@ const Header = () => {
 
   return (
     <Container>
-      <NavArea>
-        <NavLink to="/professional">Proficional</NavLink>
-        <NavLinkUnderline isActive={location.pathname === "/professional"} />
-      </NavArea>
       <DivisorComponent
         width="1px"
         height="70%"
@@ -36,9 +32,46 @@ const Header = () => {
         removeBorder
       />
       <NavArea>
+        <NavLink to="/professional">Proficional</NavLink>
+        <NavLinkUnderline isActive={location.pathname === "/professional"} />
+      </NavArea>
+      <DivisorComponent
+        width="1px"
+        height="70%"
+        removeMargin
+        backgroundColor="white"
+        color="transparent"
+        justifyContent="center"
+        removeBorder
+      />
+
+      <NavArea>
+        <NavLink to="/emulador">Emulador</NavLink>
+        <NavLinkUnderline isActive={location.pathname === "/emulador"} />
+      </NavArea>
+      <DivisorComponent
+        width="1px"
+        height="70%"
+        removeMargin
+        backgroundColor="white"
+        color="transparent"
+        justifyContent="center"
+        removeBorder
+      />
+
+      <NavArea>
         <NavLink to="/curriculum">Curriculo</NavLink>
         <NavLinkUnderline isActive={location.pathname === "/curriculum"} />
       </NavArea>
+      <DivisorComponent
+        width="1px"
+        height="70%"
+        removeMargin
+        backgroundColor="white"
+        color="transparent"
+        justifyContent="center"
+        removeBorder
+      />
     </Container>
   );
 };
