@@ -3,6 +3,7 @@ import {
   Container,
   EmulatorButton,
   EmulatorButtonContainer,
+  EmulatorButtonInside,
   EmulatorContainer,
   EmulatorScreen,
 } from "./styles";
@@ -13,7 +14,9 @@ const Emulator = () => {
       <EmulatorContainer>
         <EmulatorScreen src="https://andratech.com.br/" />
         <EmulatorButtonContainer>
-          <EmulatorButton />
+          <EmulatorButton>
+            <EmulatorButtonInside />
+          </EmulatorButton>
         </EmulatorButtonContainer>
       </EmulatorContainer>
     </Container>

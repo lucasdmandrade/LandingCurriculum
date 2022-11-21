@@ -13,7 +13,7 @@ export const Container = styled.div`
 `;
 
 export const EmulatorContainer = styled.div`
-  height: 600px;
+  height: 500px;
   width: 300px;
   display: flex;
   flex-direction: column;
@@ -43,6 +43,19 @@ export const EmulatorButton = styled.button`
   height: 40px;
   width: 40px;
   border-radius: 50%;
+  border: 0;
+  padding: 0;
   display: flex;
+  align-items: center;
+  justify-content: center;
   background-color: white;
+`;
+
+export const EmulatorButtonInside = styled.div`
+  height: 32px;
+  width: 32px;
+  border-radius: 50%;
+  border: 0;
+  display: flex;
+  background-color: black;
 `;
