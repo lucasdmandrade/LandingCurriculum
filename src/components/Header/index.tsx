@@ -32,7 +32,7 @@ const Header = () => {
         removeBorder
       />
       <NavArea>
-        <NavLink to="/professional">Proficional</NavLink>
+        <NavLink to="/professional">Profissional</NavLink>
         <NavLinkUnderline isActive={location.pathname === "/professional"} />
       </NavArea>
       <DivisorComponent
@@ -60,7 +60,7 @@ const Header = () => {
       />
 
       <NavArea>
-        <NavLink to="/curriculum">Curriculo</NavLink>
+        <NavLink to="/curriculum">Currículo</NavLink>
         <NavLinkUnderline isActive={location.pathname === "/curriculum"} />
       </NavArea>
       <DivisorComponent
