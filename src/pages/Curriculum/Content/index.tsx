@@ -61,7 +61,7 @@ const CurriculumContent = () => {
         maneira eficiente, por meio de métodos pensados estrategicamente.
         Alinhado a isso, minhas competências incluem: Desenvolvimento front-end,
         back-end e mobile. Usando as stacks: React.js, React Native e
-        JavaScript.
+        TypeScript.
       </ContainerTitleDescription>
       <ContainerTitleDescription removeMarginTop>
         “There is no single development, in either technology or management
