@@ -21,6 +21,14 @@ export const NavArea = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  &:hover {
+    hr {
+      width: 1px;
+      max-width: 1px;
+      transition-duration: 0.6s;
+      transform: scaleX(45);
+    }
+  }
 `;
 
 export const NavLink = styled(Link)`
@@ -42,13 +50,4 @@ export const NavLinkUnderline = styled.hr<{ isActive?: boolean }>`
   text-decoration: none;
   border: none;
   margin: 0;
-
-  &:hover {
-    hr {
-      width: 1px;
-      max-width: 1px;
-      transition-duration: 0.6s;
-      transform: scaleX(45);
-    }
-  }
 `;
