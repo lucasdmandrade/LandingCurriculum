@@ -1,9 +1,4 @@
 import styled from "styled-components";
-import {
-  fontDefaultBold,
-  fontDefaultligther,
-  fontDefaultLigth,
-} from "../../../theme/text";
 
 export const Container = styled.div`
   display: flex;

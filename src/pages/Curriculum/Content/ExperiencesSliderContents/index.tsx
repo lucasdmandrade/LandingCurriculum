@@ -3,13 +3,25 @@ import { IExperience } from "./types";
 
 const biodocRef: React.RefObject<HTMLButtonElement> = createRef();
 const Q2Ref: React.RefObject<HTMLButtonElement> = createRef();
+const SeedzRef: React.RefObject<HTMLButtonElement> = createRef();
+
 const experiences: IExperience[] = [
+  {
+    ref: SeedzRef,
+    link: "https://play.google.com/store/apps/details?id=br.com.quero2pay.q2bank",
+    title: "Seedz",
+    description: "Mobile developer - Pleno",
+    complement: "Dezembro de 2022 - o momento · 3 meses",
+    region: "Belo Horizonte, Minas Gerais, Brasil · Remota",
+    descritiveText:
+      "Trabalhei no desenvolvimento do aplicativo Q2 Bank, um banco digital voltado para os credenciados da Q2 terem maior controle das suas POS. Exercendo as atividades de desenvolvimento do frontend, deploy, criação de testes automatizados e criação de testes end to end.",
+  },
   {
     ref: Q2Ref,
     link: "https://play.google.com/store/apps/details?id=br.com.quero2pay.q2bank",
     title: "Quero2 Bank",
     description: "Mobile developer",
-    complement: "Abril de 2022 - Present (8 meses)",
+    complement: "Abril de 2022 - dez de 2022 (11 meses)",
     region: "Franca, São Paulo, Brasil",
     descritiveText:
       "Trabalhei no desenvolvimento do aplicativo Q2 Bank, um banco digital voltado para os credenciados da Q2 terem maior controle das suas POS. Exercendo as atividades de desenvolvimento do frontend, deploy, criação de testes automatizados e criação de testes end to end.",

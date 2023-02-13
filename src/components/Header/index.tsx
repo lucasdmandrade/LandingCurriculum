@@ -1,4 +1,3 @@
-import { Link } from "react-router-dom";
 import DivisorComponent from "../DivisorComponent";
 import { Container, NavArea, NavLink, NavLinkUnderline } from "./styles";
 import { useLocation } from "react-router-dom";

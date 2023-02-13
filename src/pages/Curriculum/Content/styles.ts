@@ -33,11 +33,13 @@ export const ContainerTitleDescriptionGradient = styled.h3<{}>`
 export const ContainerTitleDescription = styled.h3<{
   isSmokly?: boolean;
   removeMarginTop?: boolean;
+  isItalic?: boolean;
 }>`
   color: ${({ isSmokly }) => (isSmokly ? "rgba(0,0,0,0.45)" : "black")};
   margin: 0;
   margin-top: ${({ removeMarginTop }) => (removeMarginTop ? 0 : "10px")};
   font-size: 1.2em;
+  font-style: ${({ isItalic }) => (isItalic ? "italic" : "normal")};
 `;
 
 export const ContentTitle = styled.h2`
@@ -45,15 +47,6 @@ export const ContentTitle = styled.h2`
   margin-top: 15px;
   font-size: 1.4em;
   font-weight: 600;
-`;
-
-export const ExperienceContainer = styled.div`
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  margin: 10px 0 0 0;
-  padding: 5px;
-  border-style: none;
 `;
 
 export const ExperienceContent = styled.div`
@@ -65,13 +58,6 @@ export const ExperienceContent = styled.div`
   text-align: left;
   border: 1px solid transparent;
   border-radius: 15px;
-`;
-
-export const ExperienceContainerDescritiveText = styled.div`
-  width: 60%;
-  display: flex;
-  flex-direction: column;
-  margin: 20px 0 0 40px;
 `;
 
 export const ExperienceContainerResumeText = styled.div`
@@ -91,53 +77,9 @@ export const ExperienceDescription = styled.h3`
 
 export const ExperienceComplement = styled.h4<{ isSmokly?: boolean }>`
   font-size: 1.1em;
+  font-weight: 100;
   margin: 3px 0 0;
   color: ${({ isSmokly }) => (isSmokly ? "rgba(0,0,0,0.45)" : "black")};
-`;
-
-export const ScrollerPaginationContainer = styled.div`
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-`;
-
-export const ScrollerPages = styled.h4<{ isActual?: boolean }>`
-  width: 20px;
-  height: 20px;
-  text-align: center;
-  justify-content: center;
-  border: 1px solid transparent;
-  border-radius: 50%;
-  margin: 5px;
-  background-color: ${({ isActual }) =>
-    isActual ? "rgba(0,0,0,0.25)" : "transparent"};
-
-  &:hover {
-    cursor: pointer;
-    border-radius: 25px;
-  }
-`;
-
-export const ScrollerLockButton = styled.button`
-  width: 40px;
-  height: 40px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: transparent;
-  border: none;
-  border-radius: 15px;
-
-  &:hover {
-    cursor: pointer;
-    background-color: rgba(0, 0, 0, 0.4);
-  }
-`;
-
-export const ScrollerButtonImg = styled.img`
-  width: 25px;
-  height: 25px;
 `;
 
 export const AcademyDescription = styled.h3`
