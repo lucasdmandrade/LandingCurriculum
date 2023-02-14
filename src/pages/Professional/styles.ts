@@ -40,7 +40,6 @@ export const TextContainer = styled.div`
   background-color: #f2f3f5;
   align-items: center;
   justify-content: center;
-  padding: 5px 20px;
   text-align: center;
 `;
 
@@ -64,6 +63,8 @@ export const TextContent = styled.h3`
   font-family: "SF Pro Text", "SF Pro Icons", "Helvetica Neue", "Helvetica",
     "Arial", sans-serif;
   font-size: 1.25em;
+
+  padding: 5px 20px;
 `;
 
 export const BeBold = styled.span`
