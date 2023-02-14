@@ -28,6 +28,7 @@ export const NavArea = styled.div`
       transition-duration: 0.6s;
       transform: scaleX(45);
     }
+    cursor: pointer;
   }
 `;
 

@@ -1,10 +1,5 @@
 import styled from "styled-components";
-import {
-  fontDefaultBold,
-  fontDefaultBolder,
-  fontDefaultLigth,
-  fontDefaultligther,
-} from "../../theme/text";
+import { fontDefaultLigth } from "../../theme/text";
 
 export const Container = styled.div`
   position: sticky;
@@ -63,7 +58,6 @@ export const TextContent = styled.h3`
   font-family: "SF Pro Text", "SF Pro Icons", "Helvetica Neue", "Helvetica",
     "Arial", sans-serif;
   font-size: 1.25em;
-
   padding: 5px 20px;
 `;
 
