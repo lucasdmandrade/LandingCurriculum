@@ -8,6 +8,12 @@ export const Container = styled.div`
   font-family: ${fontDefaultLigth};
   font-weight: lighter;
   background-color: #161617;
+
+  @media (max-width: 1000px) {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
 `;
 
 export const ImageContainer = styled.div`
